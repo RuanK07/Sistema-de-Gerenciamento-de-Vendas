@@ -68,3 +68,9 @@
  - **JPA/Hibernate** - Utilizada a especificação do **JPA**  para persistência dos dados utilizando a implementação do **Hibernate**.
 
  - **Maven** - Para arquitetura inicial de projeto e controle de dependências.
+
+# Autor
+
+Ruan Kennedy Freire Mendes
+
+www.linkedin.com/in/ruan-kennedy-b1b084242
