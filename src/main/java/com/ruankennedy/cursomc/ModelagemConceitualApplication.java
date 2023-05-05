@@ -13,6 +13,7 @@ import com.ruankennedy.cursomc.domain.Cidade;
 import com.ruankennedy.cursomc.domain.Cliente;
 import com.ruankennedy.cursomc.domain.Endereco;
 import com.ruankennedy.cursomc.domain.Estado;
+import com.ruankennedy.cursomc.domain.ItemPedido;
 import com.ruankennedy.cursomc.domain.Pagamento;
 import com.ruankennedy.cursomc.domain.PagamentoComBoleto;
 import com.ruankennedy.cursomc.domain.PagamentoComCartao;
@@ -25,6 +26,7 @@ import com.ruankennedy.cursomc.repositories.CidadeRepository;
 import com.ruankennedy.cursomc.repositories.ClienteRepository;
 import com.ruankennedy.cursomc.repositories.EnderecoRepository;
 import com.ruankennedy.cursomc.repositories.EstadoRepository;
+import com.ruankennedy.cursomc.repositories.ItemPedidoRepository;
 import com.ruankennedy.cursomc.repositories.PagamentoRepository;
 import com.ruankennedy.cursomc.repositories.PedidoRepository;
 import com.ruankennedy.cursomc.repositories.ProdutoRepository;
@@ -55,6 +57,9 @@ public class ModelagemConceitualApplication implements CommandLineRunner{
 	
 	@Autowired
 	private PagamentoRepository pagamentoRepository;
+	
+	@Autowired
+	private ItemPedidoRepository itemPedidoRepository;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(ModelagemConceitualApplication.class, args);
@@ -94,6 +99,7 @@ public class ModelagemConceitualApplication implements CommandLineRunner{
 		estadoRepository.saveAll(Arrays.asList(est1, est2));
 		cidadeRepository.saveAll(Arrays.asList(c1, c2, c3));
 		
+		
 		Cliente cli1 = new Cliente(null, "Maria Silva", "maria@gmail.com", "36378912377", TipoCliente.PESSOAFISICA);
 
 		cli1.getTelefones().addAll(Arrays.asList("27363323", "93838393"));
@@ -105,6 +111,7 @@ public class ModelagemConceitualApplication implements CommandLineRunner{
 
 		clienteRepository.saveAll(Arrays.asList(cli1));
 		enderecoRepository.saveAll(Arrays.asList(e1, e2));
+		
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 
@@ -121,6 +128,20 @@ public class ModelagemConceitualApplication implements CommandLineRunner{
 
 		pedidoRepository.saveAll(Arrays.asList(ped1, ped2));
 		pagamentoRepository.saveAll(Arrays.asList(pagto1, pagto2));
+		
+		
+		ItemPedido ip1 = new ItemPedido(ped1, p1, 0.00, 1, 2000.00);
+		ItemPedido ip2 = new ItemPedido(ped1, p3, 0.00, 2, 80.00);
+		ItemPedido ip3 = new ItemPedido(ped2, p2, 100.00, 1, 800.00);
+
+		ped1.getItens().addAll(Arrays.asList(ip1, ip2));
+		ped2.getItens().addAll(Arrays.asList(ip3));
+
+		p1.getItens().addAll(Arrays.asList(ip1));
+		p2.getItens().addAll(Arrays.asList(ip3));
+		p3.getItens().addAll(Arrays.asList(ip2));
+
+		itemPedidoRepository.saveAll(Arrays.asList(ip1, ip2, ip3));	
 	}
 
 }
