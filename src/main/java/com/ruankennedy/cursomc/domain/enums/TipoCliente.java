@@ -1,4 +1,4 @@
-package com.ruankennedy.cursomc.domain;
+package com.ruankennedy.cursomc.domain.enums;
 
 public enum TipoCliente {
 	
