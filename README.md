@@ -1,13 +1,13 @@
 ## Índice
-* [Introdução](https://github.com/RuanK07/Web-ConceptualModeling#Web-ConceptualModeling)
-* [1. Diagrama de Classe](https://github.com/RuanK07/Web-ConceptualModeling#1-Diagrama-de-Classe)
-* [2. Diagrama de Instancias](https://github.com/RuanK07/Web-ConceptualModeling#2-Diagrama-de-Instancias)
-* [3. Requisicoes GET](https://github.com/RuanK07/Web-ConceptualModeling#3-Requisicoes-GET)
-* [4. Tecnologias Utilizadas](https://github.com/RuanK07/Web-ConceptualModeling#4-Tecnologias-Utilizadas)
+* [Introdução](https://github.com/RuanK07/Sistema-de-Gerenciamento-de-Vendas#Sistema-de-Gerenciamento-de-Vendas)
+* [1. Diagrama de Classe](https://github.com/RuanK07/Sistema-de-Gerenciamento-de-Vendas#1-Diagrama-de-Classe)
+* [2. Diagrama de Instancias](https://github.com/RuanK07/Sistema-de-Gerenciamento-de-Vendas#2-Diagrama-de-Instancias)
+* [3. Requisicoes GET](https://github.com/RuanK07/Sistema-de-Gerenciamento-de-Vendas#3-Requisicoes-GET)
+* [4. Tecnologias Utilizadas](https://github.com/RuanK07/Sistema-de-Gerenciamento-de-Vendas#4-Tecnologias-Utilizadas)
 
 -------------------------------
 
-# Web-ConceptualModeling
+# Sistema-de-Gerenciamento-de-Vendas
 
 &nbsp;&nbsp;&nbsp;&nbsp;Este estudo de caso tem como objetivo mostrar na prática como um modelo conceitual pode ser implementado sobre o paradigma orientado a objetos, usando padrões de mercado e boas práticas. Vamos tomar como caso um modelo conceitual abrangente, com o qual possamos mostrar a implementação prática em linguagem orientada a objetos.
 
